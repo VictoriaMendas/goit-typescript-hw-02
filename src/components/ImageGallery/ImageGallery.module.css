@@ -1,0 +1,9 @@
+.photo {
+  display: flex;
+  justify-content: center;
+  border-color: rgb(190, 236, 221);
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin-bottom: 70px;
+}
