@@ -1,4 +1,13 @@
-export default function ImageCard({ image, onImageClick }) {
+import { FC } from "react";
+import { Image } from "../../services/api";
+
+interface ImageCardProp {
+  image: Image;
+
+  onImageClick: (image: Image) => void;
+}
+
+const ImageCard: FC<ImageCardProp> = ({ image, onImageClick }) => {
   const handleClick = () => {
     onImageClick(image);
   };
@@ -11,4 +20,5 @@ export default function ImageCard({ image, onImageClick }) {
       />
     </div>
   );
-}
+};
+export default ImageCard;

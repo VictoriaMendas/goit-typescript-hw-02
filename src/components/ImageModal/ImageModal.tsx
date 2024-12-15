@@ -1,4 +1,5 @@
 import Modal from "react-modal";
+import { Image } from "../../services/api";
 
 const customStyles = {
   content: {
@@ -13,7 +14,16 @@ const customStyles = {
 
 Modal.setAppElement("#root");
 
-export default function ImageModal({ modalIsOpen, closeModal, modalData }) {
+interface ModalProps {
+  modalIsOpen: boolean;
+  closeModal: VoidFunction;
+  modalData: Image | null;
+}
+export default function ImageModal({
+  modalIsOpen,
+  closeModal,
+  modalData,
+}: ModalProps) {
   return (
     <Modal
       isOpen={modalIsOpen}
